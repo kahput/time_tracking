@@ -8,6 +8,8 @@ function App() {
       <Routes>
         <Route path="/" element={<RootLayout />}>
           <Route index element={<Dashboard />} />
+          <Route path="entries" element={<Dashboard />} />
+          <Route path="projects" element={<Dashboard />} />
         </Route>
       </Routes>
     </Router>
