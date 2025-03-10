@@ -1,8 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import RootLayout from "./components/RootLayout"
+import Dashboard from "./pages/Dashboard"
+
 function App() {
   return (
-    <div className="min-h-screen bg-gray-800 flex justify-center items-center">
-      <h1 className="text-6xl text-gray-100 font-extrabold">Time Tracking App</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<RootLayout />}>
+          <Route index element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </Router>
   )
 }
 
